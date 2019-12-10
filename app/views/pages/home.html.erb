@@ -1,2 +1,27 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<div class="landing">
+  <div class="landing-titles">
+    <%= image_tag "name.png", class:"name-image" %>
+    <h2>art doesn't have to be intimidating</h2>
+  </div>
+  <div class="landing-search">
+    <%= form_tag products_path, method: :get do %>
+      <%= text_field_tag :query,
+        params[:query],
+        placeholder: "what are you looking for?"
+      %>
+      <%= submit_tag "show me all", class: "btn main-button search-button" %>
+    <% end %>
+  </div>
+</div>
+  <div class="featured-artists">
+    <div class="artist-card"></div>
+    <div class="artist-card"></div>
+    <div class="artist-card"></div>
+  <div class="artist-card"></div>
+</div>
+<h3 class="featured-text">this month featured artists</h3>
+<div class="quote">
+  <h4>“Art and love are the same thing: It’s the process of seeing yourself in things that are not you.”</h4>
+  <h5>- Chuck Klosterman</h5>
+</div>
+

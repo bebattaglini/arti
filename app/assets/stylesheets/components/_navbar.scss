@@ -1,12 +1,14 @@
-.navbar-lewagon {
+.navbar-arti {
   justify-content: space-between;
-  background: white;
+  background: linear-gradient(94.6deg, #F9EEE8 2.89%, #E8C2DF 96.98%);
+  padding: 0px 30px;
 }
 
-.navbar-lewagon .navbar-collapse {
+.navbar-arti .navbar-collapse {
   flex-grow: 0;
+  align-items: center;
 }
 
-.navbar-lewagon .navbar-brand img {
+.navbar-arti .navbar-brand img {
   width: 40px;
 }
