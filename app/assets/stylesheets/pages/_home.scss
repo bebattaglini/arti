@@ -1,3 +1,12 @@
+html,body { height: 100%;  margin: 0; }
+
+footer {
+  clear: both;
+  position: relative;
+  height: 100px;
+  margin-top: 0px;
+  background: linear-gradient(95.2deg, #19EA3A -34.68%, #70C1EF 104.77%);
+}
 
 .landing {
   background: linear-gradient(94.6deg, #F9EEE8 2.89%, #E8C2DF 96.98%);
