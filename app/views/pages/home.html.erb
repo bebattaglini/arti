@@ -14,10 +14,10 @@
   </div>
 </div>
 <div class="featured-artists">
-  <div class="artist-card"></div>
-  <div class="artist-card"></div>
-  <div class="artist-card"></div>
-  <div class="artist-card"></div>
+  <%= render 'components/artist-card' %>
+  <%= render 'components/artist-card' %>
+  <%= render 'components/artist-card' %>
+  <%= render 'components/artist-card' %>
 </div>
 <h3 class="featured-text">this month featured artists</h3>
 <div class="quote">
@@ -27,7 +27,6 @@
 <div class="categories">
   <h3 class="featured-text">just looking? browse our categories</h3>
   <div class="category-group">
-    <%= link_to "category", "#", class: "btn main-button category-button" %>
     <%= link_to "category", "#", class: "btn main-button category-button" %>
     <%= link_to "category", "#", class: "btn main-button category-button" %>
     <%= link_to "category", "#", class: "btn main-button category-button" %>
