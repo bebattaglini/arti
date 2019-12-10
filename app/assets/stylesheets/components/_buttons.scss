@@ -1,0 +1,20 @@
+.main-button {
+  background: linear-gradient(90deg, #2AEA19 -42.46%, #18ABDA 117.86%);
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
+  color: white;
+  font-family: "Montserrat";
+  padding: 5px 20px;
+  font-weight: bold;
+}
+
+.main-link {
+  color: $preto;
+  text-decoration: underline;
+}
+.main-link:hover {
+  background: linear-gradient(107.84deg, #EA1919 -43.73%, #EF70D1 111.42%);
+  color: $preto;
+  padding: 5px;
+}
+
