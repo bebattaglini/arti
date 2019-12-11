@@ -1,10 +1,15 @@
 Rails.application.routes.draw do
   devise_for :artists,  path: 'artists'
-    get 'artists/:id', to: 'artists#show', as: "artist"
+  resources :artists, only: [:show] do
+    resources :products, only: [:new, :create, :edit, :update, :delete] do
+      resources :images
+    end
+  end
   devise_for :users,  path: 'users'
   root to: 'pages#home'
-  resources :products do
-    resources :images
-  end
+  get 'dashboard', to: 'pages#dashboard', as: :dashboard
+  resources :products, only: [:index, :show]
+  # get 'artists/:id', to: 'artists#show', as: "artist"
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+
 end
