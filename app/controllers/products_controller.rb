@@ -10,7 +10,7 @@ class ProductsController < ApplicationController
     @product.artist = current_user
     @product.available = true
     if @product.save
-      redirect_to new_product_image_path(@product)
+      redirect_to dashboard_path
     else
       render :new
     end
