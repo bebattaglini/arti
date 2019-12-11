@@ -9,12 +9,20 @@
 }
 
 .main-link {
-  color: $preto;
+  background: -webkit-linear-gradient(-87deg, #2AEA19 , #18ABDA);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   text-decoration: underline;
+  font-weight: bold;
+  margin-top: 5px;
+  font-size: 24px;
 }
 .main-link:hover {
-  background: linear-gradient(107.84deg, #EA1919 -43.73%, #EF70D1 111.42%);
-  color: $preto;
-  padding: 5px;
+
+  background: -webkit-linear-gradient(107.84deg, #EA1919 -43.73%, #EF70D1 111.42%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+
 }
 

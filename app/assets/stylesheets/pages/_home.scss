@@ -117,14 +117,6 @@
   text-align: center;
 }
 
-.artist-card {
-  width: 200px;
-  height: 260px;
-  background-color: white;
-  border-radius: 10px;
-  box-shadow: -3px 4px 4px rgba(0, 0, 0, 0.25);
-}
-
 .help-panel {
   padding: 60px 100px;
   display: flex;
@@ -132,7 +124,9 @@
 }
 
 .categories {
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
+  overflow: scroll;
+  display: -webkit-box;
   justify-content: center;
   margin-bottom: 30px;
   padding: 0px 100px;

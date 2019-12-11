@@ -1,6 +1,8 @@
 <div class="landing">
   <div class="landing-titles">
-    <%= image_tag "name.png", class:"name-image" %>
+    <% link_to root_path do %>
+      <%= image_tag "name.png", class:"name-image" %>
+    <% end %>
     <h2>art doesn't have to be intimidating</h2>
   </div>
   <div class="landing-search">
@@ -14,10 +16,10 @@
   </div>
 </div>
 <div class="featured-artists">
-  <div class="artist-card"></div>
-  <div class="artist-card"></div>
-  <div class="artist-card"></div>
-  <div class="artist-card"></div>
+  <%= render 'components/artist-card' %>
+  <%= render 'components/artist-card' %>
+  <%= render 'components/artist-card' %>
+  <%= render 'components/artist-card' %>
 </div>
 <h3 class="featured-text">this month featured artists</h3>
 <div class="quote">
@@ -35,7 +37,6 @@
     <%= link_to "category", "#", class: "btn main-button category-button" %>
     <%= link_to "category", "#", class: "btn main-button category-button" %>
     <%= link_to "category", "#", class: "btn main-button category-button" %>
-    <%= link_to "category", "#", class: "btn main-button category-button" %>
   </div>
 </div>
 <div class="help-panel">
@@ -43,6 +44,5 @@
   <div class="artist-card"></div>
   <div class="artist-card"></div>
   <div class="artist-card"></div>
-
 </div>
 
