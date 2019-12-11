@@ -1,9 +1,14 @@
 html,body { height: 100%;  margin: 0; }
 
+.page-wrap {
+  min-height: 100%;
+  margin-bottom: -100px;
+}
+
 footer {
   clear: both;
-  position: relative;
   height: 100px;
+  width: 100%;
   margin-top: 0px;
   background: linear-gradient(95.2deg, #19EA3A -34.68%, #70C1EF 104.77%);
 }

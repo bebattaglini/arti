@@ -124,7 +124,9 @@
 }
 
 .categories {
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
+  overflow: scroll;
+  display: -webkit-box;
   justify-content: center;
   margin-bottom: 30px;
   padding: 0px 100px;
