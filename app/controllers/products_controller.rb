@@ -16,6 +16,14 @@ class ProductsController < ApplicationController
     end
   end
 
+  def my_products
+    @artist = current_user
+    @products = Products.all
+    @myproducts = @products.where(artist: @artist.id)
+    authorize @myproducts
+    @mytips = @mytips.order('created_at DESC')
+  end
+
   private
 
   def product_params
@@ -27,3 +35,4 @@ class ProductsController < ApplicationController
     authorize @product
   end
 end
+
