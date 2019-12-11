@@ -22,9 +22,13 @@
           </div>
         </li>
       <% else %>
-          <li class="nav-item">
-            <%= link_to "sign in", new_user_session_path, class: "btn main-button" %>
-          </li>
+        <li class="nav-item dropdown">
+          <p class="main-button dropdown-toggle" id="navbarDropdown" data-toggle="dropdown" aria-expanded="false" aria-haspopup="true">log in</p>
+          <div class="dropdown-menu dropdown-menu-right menu-login" aria-labelledby="navbarDropdown">
+            <%= link_to "user", new_user_session_path, class: "dropdown-item" %>
+            <%= link_to "artist", new_artist_session_path, class: "dropdown-item" %>
+          </div>
+        </li>
       <% end %>
     </ul>
   </div>
