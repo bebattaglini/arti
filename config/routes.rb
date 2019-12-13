@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
-  devise_for :artists,  path: 'artists', controllers: { registrations: "registrations" }
+  devise_for :artists,  controllers: { registrations: "artists/registrations" }, path: 'artists'
+
   resources :artists, only: [:show] do
     resources :products, only: [:new, :create, :edit, :update, :delete] do
       resources :images
