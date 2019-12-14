@@ -1,5 +1,6 @@
 class ApplicationController < ActionController::Base
   before_action :authenticate_user!
+  before_action :authenticate_artist!
   include Pundit
 
   after_action :verify_authorized, except: :index, unless: :skip_pundit?

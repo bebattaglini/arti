@@ -40,9 +40,9 @@ class Artists::RegistrationsController < Devise::RegistrationsController
 
   protected
 
-  def authenticate_scope!
-    send(:"authenticate_#{resource_name}!", force: true)
-    self.resource = send(:"current_#{resource_name}")
+  def authenticate_artist!
+    send(:"authenticate_artist!", force: true)
+    self.resource = send(:"current_artist")
   end
 
   # If you have extra params to permit, append them to the sanitizer.

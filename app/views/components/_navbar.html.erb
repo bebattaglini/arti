@@ -15,8 +15,8 @@
           <%= link_to "dashboard", dashboard_path, class: "main-link", style: "margin-right: 30px;" %>
         </li>
         <li class="nav-item dropdown">
-          <% if current_artist.avatar? %>
-            <%= image_tag current_artist.avatar, class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+          <% if current_user.avatar? %>
+            <%= image_tag current_user.avatar, class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
               <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                 <%= link_to "Action", "#", class: "dropdown-item" %>
                 <%= link_to "log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
@@ -31,7 +31,7 @@
         </li>
       <% elsif artist_signed_in? %>
         <li class="nav-item active">
-          <%= link_to "dashboard", dashboard_path, class: "main-link", style: "margin-right: 30px;" %>
+          <%= link_to "dashboard", artist_dashboard_path(current_artist), class: "main-link", style: "margin-right: 30px;" %>
         </li>
         <li class="nav-item dropdown">
           <% if current_artist.avatar? %>
