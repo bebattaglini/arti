@@ -31,7 +31,7 @@
         </li>
       <% elsif artist_signed_in? %>
         <li class="nav-item active">
-          <%= link_to "dashboard", artist_dashboard_path(current_artist), class: "main-link", style: "margin-right: 30px;" %>
+          <%= link_to "dashboard", panel_path(current_artist), class: "main-link", style: "margin-right: 30px;" %>
         </li>
         <li class="nav-item dropdown">
           <% if current_artist.avatar? %>

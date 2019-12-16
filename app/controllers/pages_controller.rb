@@ -1,6 +1,6 @@
 class PagesController < ApplicationController
-  skip_before_action :authenticate_user!, only: [:home]
-  skip_before_action :authenticate_artist!, only: [:home]
+  skip_before_action :authenticate_user!, only: [:home, :panel]
+  skip_before_action :authenticate_artist!, only: [:home, :dashboard]
 
   def home
   end
@@ -8,6 +8,6 @@ class PagesController < ApplicationController
   def dashboard
   end
 
-  def artist_dashboard
+  def panel
   end
 end
