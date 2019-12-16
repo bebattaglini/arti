@@ -9,5 +9,9 @@ class PagesController < ApplicationController
   end
 
   def panel
+    @myproducts = []
+    @myproducts = Product.all.where(artist_id: current_artist.id)
+    authorize @myproducts
+    @myproducts = @myproducts.order('created_at DESC')
   end
 end

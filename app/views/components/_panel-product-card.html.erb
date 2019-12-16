@@ -1,0 +1,10 @@
+<% myproducts.each do |product| %>
+  <div class="product-card">
+    <% image_tag product.images.data %>
+    <div class="product-card-infos">
+        <p style=" font-size: 16px; "><%= product.title %></p>
+        <p style=" font-size: 16px; font-weight: bold; "><%= product.price %>$</p>
+    </div>
+  </div>
+<% end %>
+

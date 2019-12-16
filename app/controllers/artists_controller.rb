@@ -10,4 +10,5 @@ class ArtistsController < ApplicationController
   def featured
     @featured = Artist.all.where(rating: 5)
   end
+
 end

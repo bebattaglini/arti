@@ -1,0 +1,40 @@
+.panel .nav-tabs {
+  padding: 30px 60px 0px 60px;
+  display: flex;
+  justify-content: space-between;
+  border: none;
+}
+
+.nav-link.active {
+  border-radius: 10px 10px 0px 0px;
+  opacity: 1;
+  border: none;
+  // border-radius: 20px;
+  background: linear-gradient(94.6deg, #F9EEE8 2.89%, #E8C2DF 96.98%);
+}
+
+.nav-link a {
+  border-radius: 20px;
+}
+
+.nav-item a {
+  text-decoration: none;
+  color: $preto;
+  opacity: 0.7;
+  border: none;
+  border-radius: 20px;
+}
+
+.nav-item a:hover {
+  border-color: transparent;
+  opacity: 1;
+  border: none;
+}
+
+.tab-content {
+  margin: 0px 60px 0px 60px;
+  padding-top: 40px;
+  border: none;
+  background: linear-gradient(94.6deg, #F9EEE8 2.89%, #E8C2DF 96.98%);
+  height: 60vh;
+}
