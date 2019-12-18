@@ -16,4 +16,8 @@ class ProductPolicy < ApplicationPolicy
   def update?
     record.user == user
   end
+
+  def panel?
+    true
+  end
 end

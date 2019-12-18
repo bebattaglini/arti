@@ -1,4 +1,5 @@
 class ProductsController < ApplicationController
+  before_action :set_product, only: [:show, :edit, :update]
   def new
     @product = Product.new
     authorize @product
@@ -16,13 +17,7 @@ class ProductsController < ApplicationController
     end
   end
 
-  def my_products
-    @artist = current_user
-    @products = Products.all
-    @myproducts = @products.where(artist: @artist.id)
-    authorize @myproducts
-    @mytips = @mytips.order('created_at DESC')
-  end
+  def show; end
 
   private
 
@@ -30,7 +25,7 @@ class ProductsController < ApplicationController
     params.require(:product).permit(:title, :price, :location, :description, :category_id)
   end
 
-  def set_tip
+  def set_product
     @product = Product.find(params[:id])
     authorize @product
   end

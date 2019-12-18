@@ -12,3 +12,23 @@
 .navbar-arti .navbar-brand img {
   width: 40px;
 }
+
+.dropdown-toggle::after {
+  display: none;
+}
+
+.menu-login {
+  border-radius: 10px;
+  text-align: right;
+  border: none;
+  background: linear-gradient(90deg, #2AEA19 -42.46%, #18ABDA 117.86%);
+  a {
+    color: white;
+  }
+}
+
+.menu-login > a:hover {
+  color: white;
+  font-weight: bold;
+  background-color: transparent;
+}
