@@ -18,6 +18,8 @@ class Artist < ApplicationRecord
   validates :last_name, presence: true
   validates :password, presence: true
 
+  scope :featured, -> { where("rating > 4") }
+
   def full_name
     first_name + " " + last_name
   end
