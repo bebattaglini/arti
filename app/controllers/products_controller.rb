@@ -1,4 +1,5 @@
 class ProductsController < ApplicationController
+  before_action :set_product, only: [:show, :edit, :update]
   def new
     @product = Product.new
     authorize @product
@@ -16,13 +17,15 @@ class ProductsController < ApplicationController
     end
   end
 
+  def show; end
+
   private
 
   def product_params
     params.require(:product).permit(:title, :price, :location, :description, :category_id)
   end
 
-  def set_tip
+  def set_product
     @product = Product.find(params[:id])
     authorize @product
   end

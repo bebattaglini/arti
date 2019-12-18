@@ -29,32 +29,11 @@
               </div>
           <% end %>
         </li>
-      <% elsif artist_signed_in? %>
-        <li class="nav-item active">
-          <%= link_to "dashboard", panel_path(current_artist), class: "main-link", style: "margin-right: 30px;" %>
-        </li>
-        <li class="nav-item dropdown">
-          <% if current_artist.avatar? %>
-            <%= image_tag current_artist.avatar, class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
-              <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                <%= link_to "add art", "#", class: "dropdown-item" %>
-                <%= link_to "log out", destroy_artist_session_path, method: :delete, class: "dropdown-item" %>
-              </div>
-            <% else %>
-            <%= image_tag "face.png", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
-              <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                <%= link_to "add art", "#", class: "dropdown-item" %>
-                <%= link_to "log out", destroy_artist_session_path, method: :delete, class: "dropdown-item" %>
-              </div>
-            <% end %>
-        </li>
-
       <% else %>
         <li class="nav-item dropdown">
           <p class="main-button dropdown-toggle" id="navbarDropdown" data-toggle="dropdown" aria-expanded="false" aria-haspopup="true">log in</p>
           <div class="dropdown-menu dropdown-menu-right menu-login" aria-labelledby="navbarDropdown">
-            <%= link_to "user", new_user_session_path, class: "dropdown-item" %>
-            <%= link_to "artist", new_artist_session_path, class: "dropdown-item" %>
+            <%= link_to "register", new_user_session_path, class: "dropdown-item" %>
           </div>
         </li>
       <% end %>

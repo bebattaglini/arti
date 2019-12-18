@@ -5,8 +5,7 @@ class CreateBookings < ActiveRecord::Migration[5.2]
       t.string :description
       t.string :location
       t.references :user, foreign_key: true
-      t.references :artist, foreign_key: true
-      t.references :category, foreign_key: true
+      t.references :service, foreign_key: true
       t.integer :status
 
       t.timestamps
